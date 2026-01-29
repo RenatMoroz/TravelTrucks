@@ -48,23 +48,28 @@
 }
 
 .gallery {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
   margin-bottom: 28px;
   width: 100%;
 }
 
 .imageWrapper {
   position: relative;
-  width: 292px;
+  width: 100%;
   height: 312px;
   border-radius: 10px;
   overflow: hidden;
-  flex-shrink: 0;
 }
 
 .image {
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
 }
 
 .description {

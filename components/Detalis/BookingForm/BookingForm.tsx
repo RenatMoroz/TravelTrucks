@@ -1,13 +1,17 @@
 'use client';
+import { SetStateAction, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import toast from 'react-hot-toast';
 import css from './BookingForm.module.css';
 
 const BookingForm = () => {
+  const [startDate, setStartDate] = useState<Date | null>(null);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     toast.success('Booking successful! We will contact you soon.');
-
+    setStartDate(null);
     e.currentTarget.reset();
   };
 
@@ -25,23 +29,26 @@ const BookingForm = () => {
             className={css.input}
             name="name"
             placeholder="Name*"
-            type="text"
             required
           />
           <input
             className={css.input}
             name="email"
-            placeholder="Email*"
             type="email"
+            placeholder="Email*"
             required
           />
-          <input
+
+          <DatePicker
+            selected={startDate}
+            onChange={(date: SetStateAction<Date | null>) => setStartDate(date)}
+            placeholderText="Booking date*"
             className={css.input}
-            name="date"
-            placeholder="Booking date*"
-            type="date"
+            dateFormat="dd.MM.yyyy"
             required
+            minDate={new Date()}
           />
+
           <textarea
             className={css.textarea}
             name="comment"
