@@ -27,3 +27,22 @@ Renat Moroz
 
 [TravelTrucks-LivePage](https://travel-trucks-tan-rho.vercel.app) 
 
+## 🛠️ Getting Started
+```bash
+1. Clone the repository
+
+git clone https://github.com/renat-full/TravelTrucks.git
+
+2. Navigate into the project folder
+
+cd TravelTrucks
+
+3. Install dependencies
+
+npm install
+
+4. Run the development server
+
+npm run dev
+
+5. Open the app The application will be available at: http://localhost:3000
