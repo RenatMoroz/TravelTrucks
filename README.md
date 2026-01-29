@@ -19,6 +19,10 @@ A web application for searching and renting campers with filtering by location, 
 
 Next.js | React | TypeScript | Zustand | CSS Modules | Axios | MockAPI
 
+## 🧑‍💻 Author
+
+Renat Moroz
+
 ## 🚀 Live Demo
 
 [TravelTrucks-LivePage](https://travel-trucks-tan-rho.vercel.app) 
